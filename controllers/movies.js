@@ -89,7 +89,7 @@ module.exports.createMovie = (req, res, next) => {
 };
 
 module.exports.getAllMovies = (req, res, next) => {
-  Movie.find({})
+  Movie.find({ owner: req.user._id })
     .then((movies) => {
       checkSendiningAllMovies(movies);
       sendData(res, movies);
@@ -98,7 +98,7 @@ module.exports.getAllMovies = (req, res, next) => {
 };
 
 module.exports.deleteMovie = (req, res, next) => {
-  Movie.findOne({ movieId: req.params.movieId })
+  Movie.findOne({ movieId: req.params.movieId, owner: req.user._id })
     .then((movie) => {
       checkSendining(movie);
       if (req.user._id !== movie.owner.toHexString()) {

@@ -6,7 +6,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 178.160.143.247
+IP-адрес 158.160.143.247
 
 Frontend https://danitepdiplomfront.nomoredomainswork.ru/
 (ещё не реализован)

@@ -19,8 +19,8 @@ const app = express();
 
 const allowedCors = {
   origin: [
-    'http://danitepdiplomfront.nomoredomainswork.ru/',
-    'https://danitepdiplomfront.nomoredomainswork.ru/',
+    'http://danitepdiplomfront.nomoredomainswork.ru',
+    'https://danitepdiplomfront.nomoredomainswork.ru',
     'http://localhost:3000',
     'http://localhost:3001',
   ],
